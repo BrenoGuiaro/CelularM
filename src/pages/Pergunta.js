@@ -4,7 +4,7 @@ import { NavBarH } from '../components/NavBarH'
 export const Pergunta = () => {
   return (
     <>
-    <div>Duivida</div>
+    <div style={{padding: '10px 0px 0px 0px'}}>Duivida</div>
     <NavBarH/>
     </>
   )

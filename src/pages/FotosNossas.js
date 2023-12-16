@@ -4,7 +4,7 @@ import { NavBarV } from '../components/NavBarV'
 export const FotosNossas = () => {
   return (
     <>
-    <div>Fotos Nossas</div>
+    <div style={{padding: '10px 0px 0px 0px'}}>Fotos Nossas</div>
     <NavBarV/>
     </>
 
