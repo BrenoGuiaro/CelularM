@@ -42,7 +42,7 @@ export const Sobre = () => {
 
       </div >
 
-      <p style={{ fontSize: '13px', position: 'absolute', top: '86%', left: '76%' }}>Versao: 1.5</p>
+      <p style={{ fontSize: '13px', position: 'absolute', top: '86%', left: '76%' }}>Versao: 1.6</p>
 
       <NavBarH />
     </>
