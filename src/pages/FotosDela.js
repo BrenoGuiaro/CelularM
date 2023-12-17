@@ -60,18 +60,18 @@ export const FotosDela = () => {
 
             <Voltar onClick={() => imageAction('back')} style={{
               color: 'white',
-              fontSize: '50px',
+              fontSize: '40px',
               position: 'absolute',
               top: '85%',
-              left: '5%'
+              left: '4%'
             }} />
 
             <Next onClick={() => imageAction('next')} style={{
               color: 'white',
-              fontSize: '50px',
+              fontSize: '40px',
               position: 'absolute',
               top: '85%',
-              left: '85%'
+              left: '86%'
             }} />
 
           </div>
