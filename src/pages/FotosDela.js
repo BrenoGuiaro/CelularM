@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { IoMdClose as X } from "react-icons/io";
+import { FaArrowCircleLeft as Voltar } from "react-icons/fa";
+import { FaArrowCircleRight as Next } from "react-icons/fa";
+import '../pages/Home.css'
 
 
 
@@ -21,17 +24,17 @@ export const FotosDela = () => {
     setData({ img, i })
   }
 
-  const imageAction =(action) =>{
-      let i = data.i
-      if (action === 'next'){
-        setData({img: images[i +1], i: i+1})
-      }
-      if(action === 'back'){
-        setData({img: images[i -1], i: i-1})
-      }
-      if(!action){
-        setData({img: '', i: 0})
-      }
+  const imageAction = (action) => {
+    let i = data.i
+    if (action === 'next') {
+      setData({ img: images[i + 1], i: i + 1 })
+    }
+    if (action === 'back') {
+      setData({ img: images[i - 1], i: i - 1 })
+    }
+    if (!action) {
+      setData({ img: '', i: 0 })
+    }
   }
   return (
     <>
@@ -47,10 +50,16 @@ export const FotosDela = () => {
           alignItems: 'center',
           overflow: 'hidden'
         }}>
-          <X onClick={() => imageAction()} style={{position: 'absolute', top:'10px', right: '10px',color: 'white', fontSize:'30px'}}/>
-          <button onClick={() => imageAction('back')}>Voltar</button>
-        <img src={data.img} style={{width: 'auto', maxWidth: '90%', maxHeight: '90%'}} alt=''/>
-        <button onClick={() => imageAction('next')}>Proximo</button>
+          <X onClick={() => imageAction()} style={{ position: 'absolute', top: '10px', right: '10px', color: 'white', fontSize: '30px' }} />
+
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <img src={data.img} style={{ width: '250px',  maxWidth: '90%',maxHeight: '90%',  margin: '0px 0px 0px 13px' }} alt='' />
+
+            <div style={{display: 'flex', justifyContent: 'space-between', maxWidth: '100px',margin: 'center',}}>
+              <Voltar onClick={() => imageAction('back')} style={{ color: 'white', fontSize: '30px' }} />
+              <Next onClick={() => imageAction('next')} style={{ color: 'white', fontSize: '30px' }} />
+            </div>
+          </div>
         </div>
 
       }
@@ -66,7 +75,7 @@ export const FotosDela = () => {
               <img
                 key={i}
                 src={image}
-                style={{ width: "100%",height: 'auto', display: "block", cursor: 'pointer' }}
+                style={{ width: "100%", height: '300px', display: "block", cursor: 'pointer', objectFit: 'cover' }}
                 alt=""
                 onClick={() => viewImage(image, i)}
               />
@@ -77,7 +86,7 @@ export const FotosDela = () => {
 
 
 
-      
+
     </>
   )
 }
