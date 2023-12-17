@@ -4,6 +4,7 @@ import { IoMdClose as X } from "react-icons/io";
 import { FaArrowCircleLeft as Voltar } from "react-icons/fa";
 import { FaArrowCircleRight as Next } from "react-icons/fa";
 import '../pages/Home.css'
+import { NavBarG } from '../components/NavBarG';
 
 
 
@@ -38,6 +39,7 @@ export const FotosDela = () => {
   }
   return (
     <>
+    <NavBarG/>
 
       {data.img &&
         <div style={{
@@ -79,9 +81,9 @@ export const FotosDela = () => {
 
 
 
-      <div style={{ padding: '10px' }}>
+      <div style={{ padding: '80px 10px 10px 10px' }}>
         <ResponsiveMasonry
-          columnsCountBreakPoints={{ 350: 3, 750: 2, 900: 3 }}
+          columnsCountBreakPoints={{ 320: 3, 750: 2, 900: 3 }}
         >
           <Masonry gutter='10px'>
             {images.map((image, i) => (
