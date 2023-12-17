@@ -53,12 +53,25 @@ export const FotosDela = () => {
           <X onClick={() => imageAction()} style={{ position: 'absolute', top: '10px', right: '10px', color: 'white', fontSize: '30px' }} />
 
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <img src={data.img} style={{ width: '250px',  maxWidth: '90%',maxHeight: '90%',  margin: '0px 0px 0px 13px' }} alt='' />
+            <img src={data.img} style={{ width: '100%', maxWidth: '90%', height: '100%', margin: '0px 0px 0px 13px', borderRadius: '5px' }} alt='' />
 
-            <div style={{display: 'flex', justifyContent: 'space-between', maxWidth: '100px',margin: 'center',}}>
-              <Voltar onClick={() => imageAction('back')} style={{ color: 'white', fontSize: '30px' }} />
-              <Next onClick={() => imageAction('next')} style={{ color: 'white', fontSize: '30px' }} />
-            </div>
+
+            <Voltar onClick={() => imageAction('back')} style={{
+              color: 'white',
+              fontSize: '50px',
+              position: 'absolute',
+              top: '85%',
+              left: '5%'
+            }} />
+
+            <Next onClick={() => imageAction('next')} style={{
+              color: 'white',
+              fontSize: '50px',
+              position: 'absolute',
+              top: '85%',
+              left: '85%'
+            }} />
+
           </div>
         </div>
 
@@ -68,14 +81,14 @@ export const FotosDela = () => {
 
       <div style={{ padding: '10px' }}>
         <ResponsiveMasonry
-          columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+          columnsCountBreakPoints={{ 350: 3, 750: 2, 900: 3 }}
         >
           <Masonry gutter='10px'>
             {images.map((image, i) => (
               <img
                 key={i}
                 src={image}
-                style={{ width: "100%", height: '300px', display: "block", cursor: 'pointer', objectFit: 'cover' }}
+                className='IMG'
                 alt=""
                 onClick={() => viewImage(image, i)}
               />

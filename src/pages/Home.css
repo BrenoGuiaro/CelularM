@@ -147,7 +147,7 @@
         border-radius: 10px;
     }
 
-    .btnP{
+    .btnP {
         background-color: rgba(44, 44, 44, 0.765);
         border: none;
         border-radius: 100px;
@@ -157,7 +157,7 @@
         align-items: center;
     }
 
-    .btV{
+    .btV {
         background-color: rgba(44, 44, 44, 0.765);
         border: none;
         border-radius: 100px;
@@ -165,8 +165,8 @@
         height: 50px;
     }
 
-    
-    .btV:hover{
+
+    .btV:hover {
         background-color: rgba(199, 199, 199, 0.765);
         border: none;
         border-radius: 100px;
@@ -174,14 +174,28 @@
         height: 50px;
     }
 
-    .btnP:hover{
+    .btnP:hover {
         background-color: rgba(199, 199, 199, 0.765);
         border: none;
         border-radius: 100px;
         width: 50px;
         height: 50px;
     }
-    
 
+
+    .IMG {
+        width: 140px ;
+        height: 140px;
+        display: block;
+        cursor: pointer;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+    }
+
+    .IMG:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
 }
 
